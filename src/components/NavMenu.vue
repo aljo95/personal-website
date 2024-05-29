@@ -16,7 +16,7 @@
             <a href="https://www.linkedin.com/in/johansson-alex/">
                 <img id="LI-Icon" src="/linkedin-icon.png"></img>
             </a>
-            <a href="mailto:alejoh.github.95@gmail.com">
+            <a href="mailto:johansson_a95@hotmail.com">
                 <img id="MAIL-Icon" src="/email-icon.png"></img>
             </a>
         </div>
@@ -41,7 +41,7 @@
                 <a href="https://www.linkedin.com/in/johansson-alex/">
                     <img id="LI-Icon-Mobile" src="/linkedin-icon.png"></img>
                 </a>
-                <a href="mailto:alejoh.github.95@gmail.com">
+                <a href="mailto:johansson_a95@hotmail.com">
                     <img id="MAIL-Icon-Mobile" src="/email-icon.png"></img>
                 </a>
             </div>
@@ -143,7 +143,7 @@ export default {
 }
 #nav-container:hover {
     /* transition smooth color l8er*/ 
-    background-color: #1a1b22;
+    background-color: #1a1b22b9;
 }
 .rl {
     color:white;
@@ -170,6 +170,9 @@ export default {
     background-color: #13141a;
     border-radius: 10px;
     animation: fadeInAfterFinish 2.5s;
+}
+#img-links:hover {
+    background-color: #1a1b22b9;
 }
 p {
     color: white;
