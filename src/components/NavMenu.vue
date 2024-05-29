@@ -21,10 +21,8 @@
             </a>
         </div>
     </div>
-    <!--<div id="mobile-nav" v-if="isMobile"> v-if="!isMobileMenuClicked && isMobile"></img> -->
         <img id="mobile-menu" src="/menuIconMobile.png" @click="toggleMenu" v-if="isMobile"></img>
         <div id="mobile-nav-container" v-if="isMobileMenuClicked && isMobile">
-            <!--<p id="exit-button" @click="toggleMenu">X</p>-->
             <img id="mobile-menu-opened" src="/menuIconMobile.png" @click="toggleMenu" ></img>
             <div id="mobile-routes-container">
                 <router-link to="/" exact tag="div" class="rl mrl">Home</router-link>
@@ -46,7 +44,6 @@
                 </a>
             </div>
         </div>
-    <!--</div> -->
 </template>
 
 
@@ -60,7 +57,6 @@ export default {
     },
     created: function() {
         window.addEventListener("resize", (e) => {
-            //console.log(e.target.innerWidth)
             if (e.target.innerWidth <= 1180) this.isMobile=true
             else if (e.target.innerWidth > 1180) this.isMobile=false
         });
@@ -69,7 +65,6 @@ export default {
         window.removeEventListener("resize", e);
     },
     mounted() {
-        //console.log(window.innerWidth)
         if (window.innerWidth <= 1180) this.isMobile=true
         else if (window.innerWidth > 1180) this.isMobile=false
     },
@@ -122,12 +117,8 @@ export default {
     display: flex;
     flex-direction: column;
     justify-content: space-between;
-    max-width: 2000px;
     animation: slidin 2.5s;
-    
 	will-change: transform;
-    
-    
 }
 #nav-container {
     width: 100%;
@@ -313,5 +304,12 @@ p {
     width: 40px;
     height: 40px;
     padding-top: 7.5px;
+}
+@media only screen and (max-width: 1200px) {
+  #mobile-menu {
+    width: 35px;
+    height: 35px;
+    padding: 15px;
+  }
 }
 </style>
