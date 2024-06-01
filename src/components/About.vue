@@ -1,4 +1,5 @@
 <template>
+    <h4 id="hwaccelforce">-</h4>
     <div id ="about-container">
         <div id="title-con">
             <h2 id="title"> About me</h2>
@@ -88,5 +89,37 @@ p {
     width: 80%;
   }
 }
+
+
+/* force animation accel =) */
+#hwaccelforce {
+    position: absolute;
+    color: #03A062;
+    white-space: nowrap;
+    overflow: hidden;
+    animation: typing 4s steps(60, end) forwards, blink 1s 1;
+    margin-bottom: 20%;
+    opacity: 1;
+    } 
+@keyframes typing { 
+    0% { 
+        width: 594px;
+    } 
+    45% {
+        width: 594px;
+    }
+    100% { 
+        width: 594px;
+    } 
+} 
+@keyframes blink { 
+    0%, 
+    100% { 
+        border-right: 2px solid transparent; 
+    } 
+    50% { 
+        border-right: 2px solid #090d14;
+    } 
+} 
 </style>
 
