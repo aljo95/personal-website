@@ -2,7 +2,7 @@
     <Carousel :items-to-show=itemsToShowVar :wrap-around="true" :autoplay=autoTimer>
       <Slide v-for="slide in dataArr" :key="slide">
         <div class="carousel__item">
-            <router-link :to="getLink(slide)" class="router-container">
+            <router-link @mousedown="(e) => mouseDownGetCoords(e)" @mouseup="(e) => mouseUpGetCoords(e)" :to="getLink(slide)" class="router-container">
                 <div class="each-slide-con">
                     <img class="slide-imgs" :src=getImgLink(slide)></img>
                     <p class="slide-titles">{{ slide }}</p>
@@ -23,10 +23,9 @@
 <script>
     import { defineComponent } from 'vue'
     import { Carousel, Navigation, Slide, Pagination } from 'vue3-carousel'
-    import 'vue3-carousel/dist/carousel.css'              // :items-to-show="2.5"   :autoplay=2000 <Navigation />
-                                                                // :items-to-show="2.5" :wrap-around="true"
+    import 'vue3-carousel/dist/carousel.css'
 
-    export default defineComponent({                  // <router-link to="/about" class="rl">Portfolio</router-link>
+    export default defineComponent({                  
         name: 'WrapAround',
         components: {
             Carousel,
@@ -38,14 +37,29 @@
             return {
                 dataArr: ["About me", "Portfolio", "Skills", "Resume", "Contact", "Cats"],
                 autoTimer: 0,
-                itemsToShowVar: 3.334
+                itemsToShowVar: 3.334,
+                mousePosX: 0,
+                mousePosY: 0,
+                canNavigate: false
             }
         },
         methods: {
+            mouseDownGetCoords(e) {
+                this.mousePosX = e.pageX;
+                this.mousePosY = e.pageY;
+            },
+            mouseUpGetCoords(e) {
+                if (e.pageX === this.mousePosX && e.pageY === this.mousePosY) 
+                    this.canNavigate = true;
+                else 
+                    this.canNavigate = false;
+                
+            },
             returnValue(value) {
                 return value;
             },
             getLink(slideValue) {
+                if (this.canNavigate === false) return "";
                 switch(slideValue) {
                     case "About me":
                         return "/about";
@@ -68,8 +82,16 @@
                 switch(slideValue) {
                     case "About me":
                         return "/about.png";
+                    case "Portfolio":
+                        return "/portfolio.png";
                     case "Skills":
                         return "/skills.png";
+                    case "Resume":
+                        return "/resume.png";
+                    case "Contact":
+                        return "/contact.png";
+                    case "Cats":
+                        return "";
                 }
 
             },
@@ -81,12 +103,12 @@
             setTimeout(() => {
                 this.updateTimer(3500)
             }, 9000)
-            if (window.innerWidth <= 1200) this.itemsToShowVar=1.356
+            if (window.innerWidth <= 1200) this.itemsToShowVar=1.366
             else if (window.innerWidth > 1200) this.itemsToShowVar=3.334
         },
         created: function() {
         window.addEventListener("resize", (e) => {
-            if (e.target.innerWidth <= 1200) this.itemsToShowVar=1.356
+            if (e.target.innerWidth <= 1200) this.itemsToShowVar=1.366
             else if (e.target.innerWidth > 1200) this.itemsToShowVar=3.334
         });
         },
@@ -216,10 +238,12 @@
         width: 100%;
     }
     .carousel__prev {
-        margin-left: -40px;
+        margin-left: -30px;
+        display: none;
     }
     .carousel__next {
-        margin-right: -40px;
+        margin-right: -30px;
+        display: none;
     }
 }
 </style>

@@ -182,7 +182,7 @@ export default {
 }
 #skills-container {
     width: 750px;
-    height: 400px;
+    height: 420px;
     display: flex;
     flex-direction: column;
     justify-content: center;
@@ -201,12 +201,13 @@ h2 {
     -webkit-background-clip: text;
 }
 #icons-container {
-    width: 90%;
+    
     display: flex;
     flex-direction: row;
     flex-wrap: wrap;
     justify-content: center;
     align-items: center;
+    overflow-y: auto;
 }
 
 
@@ -264,7 +265,7 @@ h2 {
 }
 
 #ranking-container {
-    width: 50%;
+    width: 375px;
     height: 20%;
     border: solid;
     border-color: #2b2668;
@@ -286,6 +287,7 @@ h2 {
     margin: 0;
     font-weight:bold;
     margin-top: 1%;
+    font-size: 14px;
 }
 .ranking-images {
     width: 60%;
@@ -310,7 +312,8 @@ h2 {
     }
     60% {
         opacity: 0.5;
-        margin-top: -0.5%;
+        /*margin-top: -0.5%;*/
+        margin-top: 0;
         margin-bottom: 0;
     }
     100% {
@@ -329,7 +332,8 @@ h2 {
     animation: typing 4s steps(60, end) forwards, blink 1s 1;
     margin-bottom: 20%;
     opacity: 1;
-    } 
+    width: 100px !important;
+} 
 @keyframes typing { 
     0% { 
         width: 594px;
@@ -349,6 +353,39 @@ h2 {
     50% { 
         border-right: 2px solid #090d14;
     } 
+}
+@media only screen and (max-width: 600px) {
+    #skills-container {
+        height: 50%;
+    }
+    #ranking-container {
+        width: 280px !important;
+        height: 65px !important;
+        min-height: 65px !important;
+        max-height: 65px !important;
+    }
+    #skill-type {
+        font-size: 14px;
+    }
+    #icons-container {
+        height: 65vh;
+    }
+}
+@media only screen and (max-width: 400px) {
+    #skills-container {
+        height: 100%;
+        padding-top: 15%;
+    }
+    #ranking-container {
+        width: 330px;
+        width: 280px !important;
+    }
+    #skill-type {
+        font-size: 14px;
+    }
+    #icons-container {
+        height: auto;
+    }
 }
 </style>
 

@@ -35,7 +35,8 @@ export default {
     align-items: center;
     margin: 0 auto 0 auto;
     border-left: solid;
-    border-color: #141c4d;
+    /* border-color: #141c4d; */
+    border-color: #4a5edb;
     padding-left: 5px;
 }
 #first {
@@ -69,7 +70,7 @@ export default {
     color: #FFFFF0;
     white-space: nowrap;
     overflow: hidden;
-    animation: typingLong 3s steps(30, end) forwards, blink 1s infinite;
+    animation: typingLong 3s steps(30, end) forwards, blink 1s 3;
     animation-delay: 3s;
     opacity: 0;
 }
@@ -102,7 +103,8 @@ export default {
 #carousel-container {
     border-left: solid;
     border-right: solid;
-    border-color: #141c4d;
+    /*border-color: #141c4d;*/
+    border-color: #4a5edb;
     width: 875px;
     margin: 0 auto 0 auto;
     opacity: 0;
@@ -144,13 +146,29 @@ h2 {
 /* media query 100vh/vw container */
 @media only screen and (max-width: 1200px) {
   #carousel-container {
-    width: 320px;
+    /*width: 320px;*/
+    width: 322px;
   }
   #title-container {
     width: 320px;
   }
   #title-container-two {
     width: 320px;
+  }
+  #second {
+    font-size: 17px;
+  }
+}
+@media only screen and (max-width: 340px) {
+  #carousel-container {
+    /*width: 320px;*/
+    width: 302px;
+  }
+  #title-container {
+    width: 300px;
+  }
+  #title-container-two {
+    width: 300px;
   }
   #second {
     font-size: 17px;

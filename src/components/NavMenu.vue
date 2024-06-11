@@ -25,12 +25,12 @@
         <div id="mobile-nav-container" v-if="isMobileMenuClicked && isMobile">
             <img id="mobile-menu-opened" src="/menuIconMobile.png" @click="toggleMenu" ></img>
             <div id="mobile-routes-container">
-                <router-link to="/" exact tag="div" class="rl mrl">Home</router-link>
-                <router-link to="/about" exact tag="div" class="rl mrl">About me</router-link>
-                <router-link to="/portfolio" class="rl mrl">Portfolio</router-link>
-                <router-link to="/skills" class="rl mrl">Skills</router-link>
-                <router-link to="/resume" class="rl mrl">Resume</router-link>
-                <router-link to="/contact" class="rl mrl">Contact</router-link>
+                <router-link to="/" exact tag="div" class="rl mrl" @click="toggleMenu">Home</router-link>
+                <router-link to="/about" exact tag="div" class="rl mrl" @click="toggleMenu">About me</router-link>
+                <router-link to="/portfolio" class="rl mrl" @click="toggleMenu">Portfolio</router-link>
+                <router-link to="/skills" class="rl mrl" @click="toggleMenu">Skills</router-link>
+                <router-link to="/resume" class="rl mrl" @click="toggleMenu">Resume</router-link>
+                <router-link to="/contact" class="rl mrl" @click="toggleMenu">Contact</router-link>
             </div>
             <div id="mobile-icon-links">
                 <a href="https://github.com/aljo95">
@@ -57,16 +57,26 @@ export default {
     },
     created: function() {
         window.addEventListener("resize", (e) => {
-            if (e.target.innerWidth <= 1180) this.isMobile=true
-            else if (e.target.innerWidth > 1180) this.isMobile=false
+            if ((window.location.href).slice(-9) === 'portfolio' || (window.location.href).slice(-10) === 'portfolio/') {
+                if (e.target.innerWidth <= 1280) this.isMobile=true
+                else if (e.target.innerWidth > 1280) this.isMobile=false 
+            } else {
+                if (e.target.innerWidth <= 1180) this.isMobile=true
+                else if (e.target.innerWidth > 1180) this.isMobile=false
+            }
         });
     },
     destroyed: function() {
         window.removeEventListener("resize", e);
     },
     mounted() {
-        if (window.innerWidth <= 1180) this.isMobile=true
-        else if (window.innerWidth > 1180) this.isMobile=false
+        if ((window.location.href).slice(-9) === 'portfolio' || (window.location.href).slice(-10) === 'portfolio/') {
+            if (window.innerWidth <= 1245) this.isMobile=true
+            else if (window.innerWidth > 1245) this.isMobile=false 
+        } else {
+            if (window.innerWidth <= 1180) this.isMobile=true
+            else if (window.innerWidth > 1180) this.isMobile=false
+        }
     },
     methods: {
         toggleMenu() {
@@ -90,7 +100,7 @@ export default {
 </script>
 
 
-<style scoped>
+<style>
 @font-face {
     font-family: "SourceFont";
     src: url("./fonts/static/SourceCodePro-Regular.ttf")
@@ -104,7 +114,7 @@ export default {
     src: url("./fonts/static/Outfit-Medium.ttf")
 }
 #all-nav-container {
-    position: fixed;
+    position: fixed; /* fixed? */
     width: 130px;
     height: 275px;
     border-top: solid;
@@ -119,6 +129,7 @@ export default {
     justify-content: space-between;
     animation: slidin 2.5s;
 	will-change: transform;
+    z-index: 99;
 }
 #nav-container {
     width: 100%;
@@ -131,6 +142,7 @@ export default {
     background-color: #13141a;
     border-radius: 10px;
     animation: fadeInAfterFinish 2.5s;
+    z-index: 99;
 }
 #nav-container:hover {
     /* transition smooth color l8er*/ 
@@ -218,21 +230,21 @@ p {
 
 /*****  Mobile *****/
 #mobile-menu { /* Icon */
-    width: 33px;
-    height: 33px;
+    width: 35px;
+    height: 35px;
     background-color: #13141a;
-    padding: 5%;
+    padding: 15px;
     border-radius: 0 0 15px 0;
     position: absolute;
-    
+    z-index: 99;
 }
 #mobile-nav-container {
     position: absolute;
     width: 240px;
     height: 340px;
     background-color: #13141a;
-    z-index: 1;
     left: -60%;
+    z-index: 99;
 }
 .classSlideOut {
     animation: slideOutMobileMenu 0.2s linear forwards;
@@ -305,6 +317,7 @@ p {
     height: 40px;
     padding-top: 7.5px;
 }
+/*
 @media only screen and (max-width: 1200px) {
   #mobile-menu {
     width: 35px;
@@ -312,4 +325,5 @@ p {
     padding: 15px;
   }
 }
+*/
 </style>
