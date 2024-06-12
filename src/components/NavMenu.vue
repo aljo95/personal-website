@@ -10,20 +10,20 @@
             <router-link to="/contact" class="rl">Contact</router-link>
         </div>
         <div id="img-links">
-            <a href="https://github.com/aljo95">
-                <img id="GH-Icon" src="/github-mark-white.png"></img>
+            <a href="https://github.com/aljo95/PersonalPage">
+                <img id="GH-Icon" src="/nav-icons/github-mark-white.png"></img>
             </a>
             <a href="https://www.linkedin.com/in/johansson-alex/">
-                <img id="LI-Icon" src="/linkedin-icon.png"></img>
+                <img id="LI-Icon" src="/nav-icons/linkedin-icon.png"></img>
             </a>
             <a href="mailto:johansson_a95@hotmail.com">
-                <img id="MAIL-Icon" src="/email-icon.png"></img>
+                <img id="MAIL-Icon" src="/nav-icons/email-icon.png"></img>
             </a>
         </div>
     </div>
-        <img id="mobile-menu" src="/menuIconMobile.png" @click="toggleMenu" v-if="isMobile"></img>
+        <img id="mobile-menu" src="/nav-icons/menuIconMobile.png" @click="toggleMenu" v-if="isMobile"></img>
         <div id="mobile-nav-container" v-if="isMobileMenuClicked && isMobile">
-            <img id="mobile-menu-opened" src="/menuIconMobile.png" @click="toggleMenu" ></img>
+            <img id="mobile-menu-opened" src="/nav-icons/menuIconMobile.png" @click="toggleMenu" ></img>
             <div id="mobile-routes-container">
                 <router-link to="/" exact tag="div" class="rl mrl" @click="toggleMenu">Home</router-link>
                 <router-link to="/about" exact tag="div" class="rl mrl" @click="toggleMenu">About me</router-link>
@@ -33,14 +33,14 @@
                 <router-link to="/contact" class="rl mrl" @click="toggleMenu">Contact</router-link>
             </div>
             <div id="mobile-icon-links">
-                <a href="https://github.com/aljo95">
-                    <img id="GH-Icon-Mobile" src="/github-mark-white.png"></img>
+                <a href="https://github.com/aljo95/PersonalPage">
+                    <img id="GH-Icon-Mobile" src="/nav-icons/github-mark-white.png"></img>
                 </a>
                 <a href="https://www.linkedin.com/in/johansson-alex/">
-                    <img id="LI-Icon-Mobile" src="/linkedin-icon.png"></img>
+                    <img id="LI-Icon-Mobile" src="/nav-icons/linkedin-icon.png"></img>
                 </a>
                 <a href="mailto:johansson_a95@hotmail.com">
-                    <img id="MAIL-Icon-Mobile" src="/email-icon.png"></img>
+                    <img id="MAIL-Icon-Mobile" src="/nav-icons/email-icon.png"></img>
                 </a>
             </div>
         </div>
@@ -102,16 +102,8 @@ export default {
 
 <style>
 @font-face {
-    font-family: "SourceFont";
-    src: url("./fonts/static/SourceCodePro-Regular.ttf")
-}
-@font-face {
     font-family: "OutfitR";
     src: url("./fonts/static/Outfit-Regular.ttf")
-}
-@font-face {
-    font-family: "OutfitM";
-    src: url("./fonts/static/Outfit-Medium.ttf")
 }
 #all-nav-container {
     position: fixed; /* fixed? */

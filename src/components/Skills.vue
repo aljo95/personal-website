@@ -307,7 +307,7 @@ h2 {
 
 @keyframes slideUpComponent {
     0% {
-        margin-top: 2%;
+        margin-top: 1.5%;
         opacity: 0;
     }
     60% {
@@ -323,37 +323,6 @@ h2 {
     }
 }
 
-/* force animation accel =) */
-#hwaccelforce {
-    position: absolute;
-    color: #090d14;
-    white-space: nowrap;
-    overflow: hidden;
-    animation: typing 4s steps(60, end) forwards, blink 1s 1;
-    margin-bottom: 20%;
-    opacity: 1;
-    width: 100px !important;
-} 
-@keyframes typing { 
-    0% { 
-        width: 594px;
-    } 
-    45% {
-        width: 594px;
-    }
-    100% { 
-        width: 594px;
-    } 
-} 
-@keyframes blink { 
-    0%, 
-    100% { 
-        border-right: 2px solid transparent; 
-    } 
-    50% { 
-        border-right: 2px solid #090d14;
-    } 
-}
 @media only screen and (max-width: 600px) {
     #skills-container {
         height: 50%;

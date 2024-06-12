@@ -6,8 +6,8 @@
         <div id="first-container">
             <h3 class="project-title">NodeChat</h3>
             <div id="first-links">
-                <a href="https://github.com/aljo95/NodeChat"><img id="gh-icon" src="/public/gh-icon-port.png"></img></a>
-                <a href="http://www.nodechat.live"><img id="link-icon" src="/public/link-icon-port.png"></img></a>
+                <a href="https://github.com/aljo95/NodeChat"><img id="gh-icon" src="/portfolio-imgs/gh-icon-port.png"></img></a>
+                <a href="http://www.nodechat.live"><img id="link-icon" src="/portfolio-imgs/link-icon-port.png"></img></a>
             </div>
             <div class="project-description1">
                 <div class="text-lines">Full-stack real-time chat application.</div>
@@ -16,14 +16,13 @@
                 <div class="text-lines">Nginx reverse proxy with Certbot and Let's encrypt.</div>
             </div>
             <div id="link-img-1"><a href="https://nodechat.live">nodechat.live</a></div>
-            <img class="img-1" src="/public/portfolio-imgs/nc-bigimg.png"></img>
+            <img class="img-1" src="/portfolio-imgs/nc-bigimg.png"></img>
         </div>
-
         <div id="second-container">
             <h3 class="project-title">Improved Police Reports</h3>
             <div id="first-links">
-                <a href="https://github.com/aljo95/improved-police-next.js"><img id="gh-icon" src="/public/gh-icon-port.png"></img></a>
-                <a href="https://enklapolisrapporter.vercel.app/"><img id="link-icon" src="/public/link-icon-port.png"></img></a>
+                <a href="https://github.com/aljo95/improved-police-next.js"><img id="gh-icon" src="/portfolio-imgs/gh-icon-port.png"></img></a>
+                <a href="https://enklapolisrapporter.vercel.app/"><img id="link-icon" src="/portfolio-imgs/link-icon-port.png"></img></a>
             </div>
             <div class="project-description2">
                 <div class="text-lines">Next.js application in TypeScript.</div>
@@ -32,14 +31,13 @@
                 <div class="text-lines">Hosted for free via Vercel.</div>
             </div>
             <div id="link-img-1"><a href="https://enklapolisrapporter.vercel.app/">Simple Police Reports</a></div>
-            <img class="img-1" src="/public/portfolio-imgs/epr-bigimg.png"></img>
+            <img class="img-1" src="/portfolio-imgs/epr-bigimg.png"></img>
         </div>
-
         <div id="third-container">
             <h3 class="project-title">Youtube Side Comments</h3>
             <div id="first-links">
-                <a href="https://github.com/aljo95/yt-comment-side-view"><img id="gh-icon" src="/public/gh-icon-port.png"></img></a>
-                <a href="https://chromewebstore.google.com/detail/youtube-side-comments/lfjgegiodinfcejpdfoclmljkllkmgpf"><img id="link-icon" src="/public/link-icon-port.png"></img></a>
+                <a href="https://github.com/aljo95/yt-comment-side-view"><img id="gh-icon" src="/portfolio-imgs/gh-icon-port.png"></img></a>
+                <a href="https://chromewebstore.google.com/detail/youtube-side-comments/lfjgegiodinfcejpdfoclmljkllkmgpf"><img id="link-icon" src="/portfolio-imgs/link-icon-port.png"></img></a>
             </div>
             <div class="project-description3">
                 <div class="text-lines">Front-end based Chrome extension.</div>
@@ -49,7 +47,6 @@
             <div id="link-img-1"><a href="https://chromewebstore.google.com/detail/youtube-side-comments/lfjgegiodinfcejpdfoclmljkllkmgpf">Youtube Side Comments</a></div>
             <img class="img-3" v-bind:src="GIFSimulate"></img>
         </div>
-
     </div>
 </template>
 
@@ -60,15 +57,15 @@
 export default {
     data() {
         return {
-            GIFSimulate: "/public/portfolio-imgs/y1.png"
+            GIFSimulate: "/portfolio-imgs/y1.png"
         }
     },
     mounted() {
         setInterval(() => {
-            if (this.GIFSimulate === "/public/portfolio-imgs/y1.png")
-                this.GIFSimulate = "/public/portfolio-imgs/y2.png"
-            else if (this.GIFSimulate === "/public/portfolio-imgs/y2.png")
-                this.GIFSimulate = "/public/portfolio-imgs/y1.png"
+            if (this.GIFSimulate === "/portfolio-imgs/y1.png")
+                this.GIFSimulate = "/portfolio-imgs/y2.png"
+            else if (this.GIFSimulate === "/portfolio-imgs/y2.png")
+                this.GIFSimulate = "/portfolio-imgs/y1.png"
         }, 4000)
     }
 }
@@ -126,7 +123,7 @@ export default {
 }
 @keyframes slideUpComponent {
     0% {
-        margin-top: 4%;
+        margin-top: 1%;
         opacity: 0;
     }
     60% {

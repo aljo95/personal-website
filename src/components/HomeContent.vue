@@ -43,7 +43,7 @@ export default {
     color: #FFFFF0;
     white-space: nowrap;
     overflow: hidden;
-    animation: typing 2.5s steps(15, end) forwards, blink 1s 3;
+    animation: typing 2.5s steps(20, end) forwards, blink 1s 3;
 } 
   
 @keyframes typing { 
@@ -70,8 +70,8 @@ export default {
     color: #FFFFF0;
     white-space: nowrap;
     overflow: hidden;
-    animation: typingLong 3s steps(30, end) forwards, blink 1s 3;
-    animation-delay: 3s;
+    animation: typingLong 2s steps(40, end) forwards, blink 1s 2;
+    animation-delay: 2.75s;
     opacity: 0;
 }
 @keyframes typingLong { 
@@ -79,9 +79,6 @@ export default {
         width: 0px; 
         opacity: 1;
     } 
-    25% {
-        width: 0px;
-    }
     85%,
     100% { 
         width: 446px;
@@ -114,11 +111,13 @@ export default {
     animation-delay: 2s;
     animation-fill-mode: forwards;
     */
-    animation: openCarousel 8s forwards;
-    animation-delay: 2s;
+    animation: openCarousel 6s forwards;
+    animation-delay: 1.5s;
     margin-top: 10px;
     margin-bottom: 10px;
-/* animation: typingLong 3s steps(30, end) forwards, blink 1s infinite; */
+}
+@keyframes openTitles{
+    
 }
 @keyframes openCarousel {
     0% {

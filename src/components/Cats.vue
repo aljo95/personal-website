@@ -1,7 +1,7 @@
 <template>
     <div id="cats-container">
 
-        <h2 id="title">Bonus page: Me & my families' cats :)</h2>
+        <h2 id="title">Cats</h2>
         
         <div id="content-container">
             <div id="clickables">
@@ -12,25 +12,30 @@
                 <p class="cat-names" id="zeke" @click="(e) => catigator(e)">Zeke</p>
             </div>
             <div id="img-container">
-                <div v-if="geppa">
-                    <img></img>
-                    <p>GEPPIS</p>
+                <div id="g-imgs" v-show="geppa">
+                    <img id="g1" src="/cats/g/g1.jpg"></img>
+                    <img id="g2" src="/cats/g/g2.jpg"></img>
                 </div>
-                <div v-if="kajsa">
-                    <img></img>
-                    <p>KAJSIS</p>
+                <div id="k-imgs" v-show="kajsa">
+                    <img id="k1" src="/cats/k/k1-fix.jpg"></img>
+                    <img id="k2" src="/cats/k/k2.jpg"></img>
+                    <img id="k3" src="/cats/k/k3.jpg"></img>
+                    <img id="k4" src="/cats/k/k4.jpg"></img>
                 </div>
-                <div v-if="milia">
-                    <img></img>
-                    <p>MILLIS</p>
+                <div id="m-imgs" v-show="milia">
+                    <img id="m1" src="/cats/m/m1.jpg"></img>
+                    <img id="m2" src="/cats/m/m2.jpg"></img>
+                    <img id="m3" src="/cats/m/m3.jpg"></img>
+                    <img id="m4" src="/cats/m/m4.jpg"></img>
+                    <img id="m5" src="/cats/m/m5.jpg"></img>
                 </div>
-                <div v-if="tiger">
-                    <img></img>
-                    <p>TIGGIS</p>
+                <div v-show="tiger">
+                    
                 </div>
-                <div v-if="zeke">
-                    <img></img>
-                    <p>ZEKIS</p>
+                <div id="z-imgs" v-show="zeke">
+                    <img id="z1" src="/cats/z/z1.jpg"></img>
+                    <img id="z2" src="/cats/z/z2.jpg"></img>
+                    <img id="z3" src="/cats/z/z3.jpg"></img>
                 </div>
             </div>
         </div>
@@ -103,24 +108,23 @@ export default {
     src: url("./fonts/static/Outfit-Regular.ttf")
 }
 #cats-container {
-    height: 100%;
+    height: 95%;
     width: 800px;
     display: flex;
     flex-direction: column;
     align-items: center;
-    justify-content: space-between;
-    /*overflow-y: scroll;*/
-    /*animation: slideUpComponent 0.2s forwards;*/
+    animation: slideUpComponent 0.2s forwards;
 }
 #title {
     font-family: OutfitR, sans-serif;
     color: #6999eb;
     font-size: 24px;
-    height: 10%;
+    height: 60px;
     margin: 0;
     display: flex;
     justify-content: center;
     align-items: center;
+    
 }
 #content-container {
     height: 90%;
@@ -131,8 +135,8 @@ export default {
     align-items: center;
 }
 #clickables {
-    width: 50%;
-    height: 5%;
+    width: 450px;
+    height: 40px;
     display: flex;
     align-items: center;
     justify-content: space-around;
@@ -146,7 +150,6 @@ export default {
 .cat-names {
     font-family: OutfitR, sans-serif;
     font-size: 18px;
-    width: 60px;
     display: flex;
     justify-content: center;
 }
@@ -157,12 +160,182 @@ export default {
 .cat-names:active {
     color: #629fe9 !important; 
 }
-
 #img-container {
     width: 100%;
     height: 95%;
-    outline: auto;
+    border: solid;
+    border-color: #4a5ddb46;
     overflow-y: auto;
+    overflow-x: hidden;
+    background-color: #13141a;
+    border-radius: 15px;
+    padding-bottom: 4%;
+}
+::-webkit-scrollbar {
+    width: 12.5px;
+    border: none;
+    border-radius: 15px;
+}
+::-webkit-scrollbar-thumb {
+    background-color: #3c5792; /*#5278b9d5;  #4a5edb; */
+    border-radius: 3px;
+    margin: auto;
+    border-radius: 15px;
+}
+::-webkit-scrollbar-thumb:hover {
+    background-color: #5576bd;
+}
+::-webkit-scrollbar-track {
+  border-radius: 3px;
+  background-color: #1a1b2c;
+  border-radius: 15px;
+  margin: 6px 0 6px 0;
+}
+
+/* G */
+#g-imgs {
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-evenly;
+    align-items: center;
+    margin-left: 6px;
+}
+#g1, #g2 {
+    width: 80%;
+    margin-top: 4%;
+    border-radius: 15px;
+}
+
+/* M */
+#m-imgs {
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-evenly;
+    align-items: center;
+    margin-left: 6px;
+}
+#m1, #m2, #m3, #m4, #m5 {
+    width: 80%;
+    margin-top: 4%;
+    border-radius: 15px;
+}
+#m1 {
+    width: 70%;
+}
+#m4 {
+    width: 50%;
+}
+
+/* K */
+#k-imgs {
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-evenly;
+    align-items: center;
+    margin-left: 6px;
+}
+#k1, #k2, #k3, #k4 {
+    width: 80%;
+    margin-top: 4%;
+    border-radius: 15px;
+}
+#k1 {
+    width: 60%;
+    border-radius: 50%;
+}
+
+/* Z */
+#z-imgs {
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-evenly;
+    align-items: center;
+    margin-left: 6px;
+}
+#z1, #z2, #z3 {
+    width: 60%;
+    margin-top: 4%;
+    border-radius: 15px;
+}
+#z2 {
+    width: 85%
+}
+#z3 {
+    width: 70%;
+}
+
+/* T */
+
+
+/* MQs */
+@media only screen and (max-width: 600px) {
+    #cats-container {
+        width: 550px;
+    }
+    #clickables {
+        width: 400px;
+    }
+}
+@media only screen and (max-width: 400px) {
+    #cats-container {
+        width: 310px;
+        
+    }
+    #clickables {
+        width: 310px;
+    }
+    #img-container {
+        border-radius: 0 0 15px 15px;
+    }
+
+    #g-imgs {
+        margin: 0;
+    }
+    #g1, #g2 {
+        width: 95%;
+    }
+
+    #k-imgs {
+        margin: 0;
+    }
+    #k1, #k2, #k3, #k4 {
+        width: 95%;
+    }
+
+    #m-imgs {
+        margin: 0;
+    }
+    #m1, #m2, #m3, #m4, #m5 {
+        width: 95%;
+    }
+    #m4 {
+        width: 90%;
+    }
+
+    #z-imgs {
+        margin: 0;
+    }
+    #z1, #z2, #z3 {
+        width: 95%;
+    }
+}
+@keyframes slideUpComponent {
+    0% {
+        margin-top: 1%;
+        opacity: 0;
+    }
+    60% {
+        opacity: 0.5;
+        /*margin-top: -0.75%;*/
+    }
+    100% {
+        margin-top: 0%;
+        opacity: 1;
+    }
 }
 </style>
 

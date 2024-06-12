@@ -1,9 +1,9 @@
 <template>
     <div id="resume-container">
 
-        <a id="download-link" href="/CV_Alexander-Johansson.pdf" download>Download Resume</a>
+        <a id="download-link" href="/resume/CV_Alexander_Johansson.pdf" download>Download Resume</a>
         <div id="img-container">
-            <img id="cv-image" src="/cv-image.png"></img>
+            <img id="cv-image" src="/resume/cv-image.png"></img>
         </div>
 
 
@@ -79,7 +79,7 @@ export default {
 }
 @keyframes slideUpComponent {
     0% {
-        margin-top: 5%;
+        margin-top: 1%;
         opacity: 0;
     }
     60% {

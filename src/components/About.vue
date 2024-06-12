@@ -91,7 +91,7 @@ p {
 }
 @keyframes slideUpComponent {
     0% {
-        margin-top: 5%;
+        margin-top: 1%;
         opacity: 0;
     }
     60% {

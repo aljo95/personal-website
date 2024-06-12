@@ -35,7 +35,7 @@
         },
         data() {
             return {
-                dataArr: ["About me", "Portfolio", "Skills", "Resume", "Contact", "Cats"],
+                dataArr: ["Portfolio", "Skills", "Resume", "Contact", "Cats", "About me"],
                 autoTimer: 0,
                 itemsToShowVar: 3.334,
                 mousePosX: 0,
@@ -81,16 +81,18 @@
                 //"/about.png"
                 switch(slideValue) {
                     case "About me":
-                        return "/about.png";
+                        return "/carousel-imgs/about.png";
                     case "Portfolio":
-                        return "/portfolio.png";
+                        return "/carousel-imgs/portfolio.png";
                     case "Skills":
-                        return "/skills.png";
+                        return "/carousel-imgs/skills.png";
                     case "Resume":
-                        return "/resume.png";
+                        return "/carousel-imgs/resume.png";
                     case "Contact":
-                        return "/contact.png";
+                        return "/carousel-imgs/contact.png";
                     case "Cats":
+                        return "/carousel-imgs/cats.png";
+                    default:
                         return "";
                 }
 

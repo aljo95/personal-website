@@ -3,16 +3,16 @@
         <h2>Contact</h2>
 
         <div id="phone-and-mail">
-            <p><img id="mail-icon" src="/email-icon.png" class="icons"></img>johansson_a95@hotmail.com</p>
-            <p><img src="/phone-icon-white.png" class="icons"></img>+4670 748 38 97</p>
+            <p><img id="mail-icon" src="/contact/email-icon.png" class="icons"></img>johansson_a95@hotmail.com</p>
+            <p><img src="/contact/phone-icon-white.png" class="icons"></img>+4670 748 38 97</p>
         </div>
 
         <div id="gh-and-li">
             <a href="https://github.com/aljo95">
-                <img class="bottom-icons" src="/github-mark-white.png"></img>
+                <img class="bottom-icons" src="/contact/github-mark-white.png"></img>
             </a>
             <a href="https://www.linkedin.com/in/johansson-alex/">
-                <img class="bottom-icons" src="/linkedin-icon.png"></img>
+                <img class="bottom-icons" src="/contact/linkedin-icon.png"></img>
             </a>
         </div>
     </div>
@@ -98,7 +98,7 @@ p {
 }
 @keyframes slideUpComponent {
     0% {
-        margin-top: 2%;
+        margin-top: 1.5%;
         opacity: 0;
     }
     60% {
