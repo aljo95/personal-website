@@ -49,7 +49,8 @@ export default {
 <style scoped>
 @font-face {
     font-family: "OutfitR";
-    src: url("./fonts/static/Outfit-Regular.ttf")
+    /*src: url("./fonts/static/Outfit-Regular.ttf")*/
+    src: url('$fonts/Outfit-Regular.ttf')
 }
 h2 {
     color: #6999eb;

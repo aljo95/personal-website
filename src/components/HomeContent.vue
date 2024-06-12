@@ -135,7 +135,7 @@ export default {
 }
 @font-face {
     font-family: "OutfitR";
-    src: url("./fonts/static/Outfit-Regular.ttf")
+    src: url('$fonts/Outfit-Regular.ttf')
 }
 h2 {
     font-size: 24px;

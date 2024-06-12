@@ -103,7 +103,7 @@ export default {
 <style>
 @font-face {
     font-family: "OutfitR";
-    src: url("./fonts/static/Outfit-Regular.ttf")
+    src: url('$fonts/Outfit-Regular.ttf')
 }
 #all-nav-container {
     position: fixed; /* fixed? */
