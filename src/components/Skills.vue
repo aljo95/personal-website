@@ -4,13 +4,31 @@
         <h2>Skills</h2>
         <div id="ranking-container">
             <p id="skill-type"> {{ skillType }} </p>
-            <img class="ranking-images" :src="skillImage"></img>
+            <!--<img class="ranking-images" :src="skillImage"></img> -->
+            <img class="ranking-images" src="/skills-icons/ranking/jsSkill.png" v-show="currentRank.js">
+            <img class="ranking-images" src="/skills-icons/ranking/tsSkill.png" v-show="currentRank.ts">
+            <img class="ranking-images" src="/skills-icons/ranking/javaSkill.png" v-show="currentRank.java">
+            <img class="ranking-images" src="/skills-icons/ranking/pySkill.png" v-show="currentRank.py">
+            <img class="ranking-images" src="/skills-icons/ranking/asmSkill.png" v-show="currentRank.asm">
+            <img class="ranking-images" src="/skills-icons/ranking/cSkill.png" v-show="currentRank.c">
+            <img class="ranking-images" src="/skills-icons/ranking/elixirSkill.png" v-show="currentRank.elixir">
+            <img class="ranking-images" src="/skills-icons/ranking/angularSkill.png" v-show="currentRank.angular">
+            <img class="ranking-images" src="/skills-icons/ranking/reactSkill.png" v-show="currentRank.react">
+            <img class="ranking-images" src="/skills-icons/ranking/nextSkill.png" v-show="currentRank.next">
+            <img class="ranking-images" src="/skills-icons/ranking/vueSkill.png" v-show="currentRank.vue">
+            <img class="ranking-images" src="/skills-icons/ranking/tailwindSkill.png" v-show="currentRank.tailwind">
+            <img class="ranking-images" src="/skills-icons/ranking/mySQLSkill.png" v-show="currentRank.mySQL">
+            <img class="ranking-images" src="/skills-icons/ranking/postgreSQLSkill.png" v-show="currentRank.postgreSQL">
+            <img class="ranking-images" src="/skills-icons/ranking/mDBSkill.png" v-show="currentRank.mDB">
+            <img class="ranking-images" src="/skills-icons/ranking/expressSkill.png" v-show="currentRank.express">
+            <img class="ranking-images" src="/skills-icons/ranking/springSkill.png" v-show="currentRank.spring">
+            <img class="ranking-images" src="/skills-icons/ranking/djangoSkill.png" v-show="currentRank.django">
         </div>
         <div id="icons-container">
             <div class="imgs-containers" v-for="s in skills"
-            @mouseover="(e) => mouseOver(e)"
-            @mouseleave="(e) => mouseLeave(e)"
-            @click="(e) => mouseClick(e)"
+                @mouseover="(e) => mouseOver(e)"
+                @mouseleave="(e) => mouseLeave(e)"
+                @click="(e) => mouseClick(e)"
             >
                 <img :id=getID(s) :src=getImgLink(s)></img>
             </div>
@@ -23,6 +41,7 @@
 
 <script>
 export default {
+    /* Preload images in variables and then set a state variable (this.currentImage) equals to the right one */
     data() {
         return {
             skills: [
@@ -32,7 +51,28 @@ export default {
                 "express", "spring", "django"
             ],
             skillType: "JavaScript",
-            skillImage: "/skills-icons/ranking/jsSkill.png"
+            //skillImage: "/skills-icons/ranking/jsSkill.png",
+            currentRank: {
+                js: true,
+                ts: false,
+                java: false,
+                py: false,
+                asm: false,
+                c: false,
+                elixir: false,
+                angular: false,
+                react: false,
+                next: false,
+                vue: false,
+                tailwind: false,
+                mySQL: false,
+                postgreSQL: false,
+                mDB: false,
+                express: false,
+                spring: false,
+                django: false,
+            },
+            prevRank: "js"
         }
     }, 
     methods: {
@@ -42,8 +82,11 @@ export default {
         getID(skill) {
             return skill;
         },
-        getRankingImage(e) { /* */
-            this.skillImage = "/skills-icons/ranking/" + e.id + "Skill.png"
+        getRankingImage(e) {
+            //this.skillImage = "/skills-icons/ranking/" + e.id + "Skill.png"
+            this.currentRank[this.prevRank] = false;
+            this.currentRank[e.id] = true;
+            this.prevRank = e.id;
         },
         mouseLeave(e) {
             if (e.target.children[0])
