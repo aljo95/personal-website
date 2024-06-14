@@ -1,4 +1,5 @@
 <template>
+    <img id="bg-logo" src="/contact/background-logo.png"></img>
     <div id="contact-container">
         <h2>Contact</h2>
 
@@ -15,6 +16,7 @@
                 <img class="bottom-icons" src="/contact/linkedin-icon.png"></img>
             </a>
         </div>
+        <p id="copyright-string">&copy; 2024 <br>Alexander Johansson</p>
     </div>
 </template>
 
@@ -33,6 +35,12 @@ export default {
     font-family: "OutfitR";
     src: url('$fonts/Outfit-Regular.ttf')
 }
+#bg-logo {
+    position: absolute;
+    z-index: 0;
+    opacity: 0.06;
+    width: 500px;
+}
 #contact-container {
     width: 300px;
     height: 300px;
@@ -40,6 +48,7 @@ export default {
     flex-direction: column;
     align-items: center;
     animation: slideUpComponent 0.25s forwards;
+    z-index: 1;
 }
 h2 {
     margin: 0;
@@ -48,7 +57,6 @@ h2 {
     height: 45px;
     font-family: OutfitR, sans-serif;
     color: #6999eb;
-    margin-top: 5%;
     margin-bottom: 10%;
 }
 #phone-and-mail {
@@ -85,6 +93,7 @@ p {
     width: 125px;
     display: flex;
     justify-content: space-around;
+    margin-top: 5%;
 }
 .bottom-icons {
     width: 30px;
@@ -95,6 +104,12 @@ p {
 }
 .bottom-icons:hover {
     background-color: #22232cb9;
+}
+#copyright-string {
+    margin-top: 5%;
+    text-align: center;
+    font-size: 15px;
+    opacity: 0.96;
 }
 @keyframes slideUpComponent {
     0% {
@@ -108,6 +123,11 @@ p {
     100% {
         margin-top: 0%;
         opacity: 1;
+    }
+}
+@media only screen and (max-width: 400px) {
+    #bg-logo {
+        width: 100%;
     }
 }
 </style>
