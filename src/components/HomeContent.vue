@@ -1,4 +1,5 @@
 <template>
+    <img id="bg-logo" src="/contact/background-logo.png"></img>
     <div id="main-content">
         <div id="title-container">
             <h2 id="first">Alex Johansson</h2>
@@ -28,6 +29,12 @@ export default {
 
 
 <style scoped>
+#bg-logo {
+    position: absolute;
+    z-index: 0;
+    opacity: 0.06;
+    width: 500px;
+}
 #title-container, #title-container-two {
     width: 872px;
     height: 5%;
@@ -120,13 +127,12 @@ export default {
     animation-delay: 4.5s;
     margin-top: 10px;
     margin-bottom: 10px;
-}
-@keyframes openTitles{
-    
+    pointer-events: none;
 }
 @keyframes openCarousel {
     0% {
         opacity: 0;
+        pointer-events: none;
     }
     55% {
         opacity: 0;
@@ -136,6 +142,7 @@ export default {
     }
     100% {
         opacity: 1;
+        pointer-events:all;
     }
 }
 @font-face {

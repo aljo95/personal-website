@@ -20,6 +20,7 @@ html, body, #app {
   height: 100%;
   margin: 0;
   overflow-y: hidden;
+  z-index: 1;
 }
 #wrapper {
   width: 100%;
@@ -47,6 +48,27 @@ html {
     url('/skills-icons/tailwind1.png'),
     url('/skills-icons/ts1.png'),
     url('/skills-icons/vue1.png'),
+
+    url('/skills-icons/ranking/angularSkill.png'),
+    url('/skills-icons/ranking/asmSkill.png'),
+    url('/skills-icons/ranking/cSkill.png'),
+    url('/skills-icons/ranking/djangoSkill.png'),
+    url('/skills-icons/ranking/elixirSkill.png'),
+    url('/skills-icons/ranking/expressSkill.png'),
+    url('/skills-icons/ranking/javaSkill.png'),
+    url('/skills-icons/ranking/jsSkill.png'),
+    url('/skills-icons/ranking/mDBSkill.png'),
+    url('/skills-icons/ranking/mySQLSkill.png'),
+    url('/skills-icons/ranking/nextSkill.png'),
+    url('/skills-icons/ranking/postgreSQLSkill.png'),
+    url('/skills-icons/ranking/pySkill.png'),
+    url('/skills-icons/ranking/reactSkill.png'),
+    url('/skills-icons/ranking/springSkill.png'),
+    url('/skills-icons/ranking/tailwindSkill.png'),
+    url('/skills-icons/ranking/tsSkill.png'),
+    url('/skills-icons/ranking/vueSkill.png'),
+  
+
     url('/contact/background-logo.png'),
     url('/contact/email-icon.png'),
     url('/contact/github-mark-white.png'),
@@ -66,12 +88,12 @@ html {
     url('/cats/z/z1.jpg'),
     url('/cats/z/z2.jpg'),
     url('/cats/z/z3.jpg'),
-    url('/portfolio-imgs/epr-bigimg.png'),
+    url('/portfolio-imgs/epr-bigimg.jpg'),
     url('/portfolio-imgs/gh-icon-port.png'),
     url('/portfolio-imgs/link-icon-port.png'),
     url('/portfolio-imgs/nc-bigimg.png'),
-    url('/portfolio-imgs/y1.png'),
-    url('/portfolio-imgs/y2.png'),
+    url('/portfolio-imgs/y1.jpg'),
+    url('/portfolio-imgs/y2.jpg'),
     url('/resume/cv-image.png'),
     url('/nav-icons/email-icon.png'),
     url('/nav-icons/github-mark-white.png'),

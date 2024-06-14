@@ -224,7 +224,7 @@ export default {
     src: url('$fonts/Outfit-Regular.ttf')
 }
 #skills-container {
-    width: 750px;
+    width: 710px;
     height: 420px;
     display: flex;
     flex-direction: column;
@@ -251,6 +251,7 @@ h2 {
     justify-content: center;
     align-items: center;
     overflow-y: auto;
+    
 }
 
 
@@ -262,6 +263,11 @@ h2 {
     height: 45%;
     border-radius: 5px;
     transition: 0.15s;
+    
+}
+#js {
+    width: 45%;
+    height: 45%;
 }
 
 .imgs-containers {
@@ -314,7 +320,6 @@ h2 {
     border-color: #2b2668;
     border-radius: 10px;
     border-width: 2px;
-    /*background-color: #2b266848;*/
     background-image: linear-gradient(to bottom right, #2b266848, #13102c48, rgb(12, 12, 12));
     display: flex;
     flex-direction: column;
@@ -322,7 +327,6 @@ h2 {
     align-items: center;
     margin-top: 3%;
     margin-bottom: 1.5%;
-    
 }
 #skill-type {
     font-family: OutfitR, sans-serif;
@@ -331,10 +335,12 @@ h2 {
     font-weight:bold;
     margin-top: 1%;
     font-size: 14px;
+    
 }
 .ranking-images {
     width: 60%;
     height: 60%;
+    
 }
 .rankAnim {
     animation: rankingIn 0.5s;

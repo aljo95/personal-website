@@ -31,7 +31,7 @@
                 <div class="text-lines">Hosted for free via Vercel.</div>
             </div>
             <div id="link-img-1"><a href="https://enklapolisrapporter.vercel.app/">Simple Police Reports</a></div>
-            <img class="img-1" src="/portfolio-imgs/epr-bigimg.png"></img>
+            <img class="img-1" src="/portfolio-imgs/epr-bigimg.jpg"></img>
         </div>
         <div id="third-container">
             <h3 class="project-title">Youtube Side Comments</h3>
@@ -57,15 +57,15 @@
 export default {
     data() {
         return {
-            GIFSimulate: "/portfolio-imgs/y1.png"
+            GIFSimulate: "/portfolio-imgs/y1.jpg"
         }
     },
     mounted() {
         setInterval(() => {
-            if (this.GIFSimulate === "/portfolio-imgs/y1.png")
-                this.GIFSimulate = "/portfolio-imgs/y2.png"
-            else if (this.GIFSimulate === "/portfolio-imgs/y2.png")
-                this.GIFSimulate = "/portfolio-imgs/y1.png"
+            if (this.GIFSimulate === "/portfolio-imgs/y1.jpg")
+                this.GIFSimulate = "/portfolio-imgs/y2.jpg"
+            else if (this.GIFSimulate === "/portfolio-imgs/y2.jpg")
+                this.GIFSimulate = "/portfolio-imgs/y1.jpg"
         }, 4000)
     }
 }
