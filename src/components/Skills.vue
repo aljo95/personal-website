@@ -368,7 +368,7 @@ h2 {
 
 @media only screen and (max-width: 600px) {
     #skills-container {
-        height: 50%;
+        height: 60%;
     }
     #ranking-container {
         width: 280px !important;

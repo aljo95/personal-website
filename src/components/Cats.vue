@@ -33,8 +33,8 @@
                     
                 </div>
                 <div id="z-imgs" v-show="zeke">
-                    <img id="z1" src="/cats/z/z1.jpg"></img>
                     <img id="z2" src="/cats/z/z2.jpg"></img>
+                    <img id="z1" src="/cats/z/z1.jpg"></img>
                     <img id="z3" src="/cats/z/z3.jpg"></img>
                 </div>
             </div>
@@ -55,7 +55,8 @@ export default {
             milia: false,
             tiger: false,
             zeke: false,
-            prevSelected: "geppa"
+            prevSelected: "geppa",
+            imgCon: ""
         }
     },
     methods: {
@@ -92,10 +93,13 @@ export default {
                     break;
             }
             this.prevSelected = currentCat;
+            document.getElementById("img-container").scrollTop = 0;
+
         }
     },
     mounted() {
         document.getElementById(this.prevSelected).style.color = "#7e9af5"
+        this.imgCon = document.getElementById("#img-container")
     }
 }
 </script>
