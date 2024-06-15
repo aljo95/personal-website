@@ -1,5 +1,5 @@
 <template>
-    <h4 id="hwaccelforce">-</h4>
+    <router-link to="/cats"><img id="surprise" src="/surprise.png" /></router-link>
     <div id="skills-container">
         <h2>Skills</h2>
         <div id="ranking-container">
@@ -212,6 +212,13 @@ export default {
     mounted() {
         document.getElementById("js").classList.add("onlyClick")
         document.getElementById("js").parentElement.classList.add("img-containers-clicked")
+        this.counterInterval = 0;
+        this.counterInterval = setInterval(() => {
+            document.getElementById("surprise").classList.toggle("toggleCatAnim");
+        }, 50000)
+    },
+    unmounted() {
+        clearInterval(this.counterInterval);
     }
 }
 </script>
@@ -386,13 +393,16 @@ h2 {
         font-size: 14px;
     }
     #icons-container {
-        height: 65vh;
+        overflow-y: scroll;
+    }
+    #surprise {
+        display: none;
     }
 }
 @media only screen and (max-width: 400px) {
     #skills-container {
         height: 100%;
-        padding-top: 15%;
+        padding-top: %;
     }
     #ranking-container {
         width: 330px;
@@ -402,7 +412,11 @@ h2 {
         font-size: 14px;
     }
     #icons-container {
-        height: auto;
+        overflow-y: scroll;
+        height: 400px;
+    }
+    #surprise {
+        display: none;
     }
 }
 </style>

@@ -1,5 +1,5 @@
 <template>
-    <!--<h4 id="hwaccelforce">-</h4> -->
+    <router-link to="/cats"><img id="surprise" src="/surprise.png" /></router-link>
     <div id="title-and-about-con">
         <div id="title-con">
                 <h2 id="title"> About me</h2>
@@ -31,6 +31,15 @@
 
 <script>
 export default {
+    mounted() {
+        this.counterInterval = 0;
+        this.counterInterval = setInterval(() => {
+            document.getElementById("surprise").classList.toggle("toggleCatAnim");
+        }, 50000)
+    },
+    unmounted() {
+        clearInterval(this.counterInterval);
+    }
 }
 </script>
 
@@ -47,6 +56,9 @@ export default {
 </style>
 
 <style scoped>
+#surprise {
+    z-index: 99;
+}
 @font-face {
     font-family: "OutfitR";
     /*src: url("./fonts/static/Outfit-Regular.ttf")*/
@@ -109,13 +121,18 @@ p {
     width: 70%;
     padding-right: 5%;
   }
+  #surprise {
+        display: none;
+    }
 }
 @media only screen and (max-width: 800px) {
   #about-container {
     width: 90%;
     padding-right: 5%;
-    
   }
+  #surprise {
+        display: none;
+    }
 }
 
 

@@ -1,7 +1,9 @@
 <template>
+
+    <router-link to="/cats"><img id="surprise" src="/surprise.png" /></router-link>
     <div id="portfolio-container">
-        <h2 id="title">Portfolio</h2>
-        <p id="sub-title">Relevant Web Dev projects</p>
+        <h2 id="title">Web Portfolio</h2>
+        <p id="sub-title">Solo Dev Projects</p>
 
         <div id="first-container">
             <h3 class="project-title">NodeChat</h3>
@@ -67,6 +69,13 @@ export default {
             else if (this.GIFSimulate === "/portfolio-imgs/y2.jpg")
                 this.GIFSimulate = "/portfolio-imgs/y1.jpg"
         }, 4000)
+        this.counterInterval = 0;
+        this.counterInterval = setInterval(() => {
+            document.getElementById("surprise").classList.toggle("toggleCatAnim");
+        }, 50000)
+    },
+    unmounted() {
+        clearInterval(this.counterInterval);
     }
 }
 </script>
@@ -223,6 +232,9 @@ export default {
     #first-container, #second-container, #third-container {
         width: 900px;
     }
+    #surprise {
+        display: none;
+    }
 }
 @media only screen and (max-width: 1000px) {
     #first-container, #second-container, #third-container {
@@ -231,6 +243,9 @@ export default {
     #portfolio-container {
         height: 100dvh !important;
     }
+    #surprise {
+        display: none;
+    }
 }
 @media only screen and (max-width: 915px) {
     #first-container, #second-container, #third-container {
@@ -238,6 +253,9 @@ export default {
     }
     #portfolio-container {
         height: 100dvh !important;
+    }
+    #surprise {
+        display: none;
     }
 }
 @media only screen and (max-width: 815px) {
@@ -259,6 +277,9 @@ export default {
     }
     #first-links {
         margin-bottom: 10px;
+    }
+    #surprise {
+        display: none;
     }
 } /*text-wrap:wrap; */
 </style>

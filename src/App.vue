@@ -1,15 +1,16 @@
 
 <template>
   <nav-menu></nav-menu>
+  
   <div id="wrapper">
-    <router-view></router-view>
+    <router-view>
+    </router-view>
   </div>
 </template>
 
 
 <script>
 export default {
-
 }
 </script>
 
@@ -21,6 +22,7 @@ html, body, #app {
   margin: 0;
   overflow-y: hidden;
   z-index: 1;
+  overflow-x: hidden;
 }
 #wrapper {
   width: 100%;
@@ -28,6 +30,30 @@ html, body, #app {
   display: flex;
   justify-content: center;
   align-items: center;
+}
+#surprise {
+  position: absolute;
+  height: 10%;
+  top: 20%;
+  right: -4vw;
+  pointer-events: all;
+}
+.toggleCatAnim {
+  animation: catAnim 10s forwards linear;
+}
+@keyframes catAnim {
+  0% {
+    right: -4vw;
+  }
+  5% {
+    right: 0vw;
+  }
+  95% {
+    right: 0vw;
+  }
+  100% {
+    right: -4vw;
+  }
 }
 html {
   background-image: url('/skills-icons/angular1.png'),

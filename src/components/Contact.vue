@@ -1,4 +1,5 @@
 <template>
+    <router-link to="/cats"><img id="surprise" src="/surprise.png" /></router-link>
     <img id="bg-logo" src="/contact/background-logo.png"></img>
     <div id="contact-container">
         <h2>Contact</h2>
@@ -25,6 +26,15 @@
 
 <script>
 export default {
+    mounted() {
+        this.counterInterval = 0;
+        this.counterInterval = setInterval(() => {
+            document.getElementById("surprise").classList.toggle("toggleCatAnim");
+        }, 10000)
+    },
+    unmounted() {
+        clearInterval(this.counterInterval);
+    }
 }
 </script>
 
@@ -129,6 +139,35 @@ p {
     #bg-logo {
         width: 100%;
     }
+    #surprise {
+        position: absolute;
+        height: 10%;
+        top: 100%;
+        right: 20%;
+        pointer-events: all;
+        -webkit-transform: rotate(90deg);
+        -moz-transform: rotate(90deg);
+        -o-transform: rotate(90deg);
+        -ms-transform: rotate(90deg);
+        transform: rotate(90deg);
+    }
+    .toggleCatAnim {
+        animation: catAnim 10s forwards linear;
+    }
+@keyframes catAnim {
+    0% {
+        top: 100%;
+    }
+    5% {
+        top: 91.5%;
+    }
+    95% {
+        top: 91.5%;
+    }
+    100% {
+        top: 100%;
+    }
+}
 }
 </style>
 

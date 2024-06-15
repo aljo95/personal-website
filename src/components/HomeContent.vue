@@ -1,4 +1,5 @@
 <template>
+    <router-link to="/cats"><img id="surprise" src="/surprise.png" /></router-link>
     <img id="bg-logo" src="/contact/background-logo.png"></img>
     <div id="main-content">
         <div id="title-container">
@@ -22,6 +23,15 @@ import WrapAround from './Carousel.vue'
 export default {
     components: {
         'carousel-comp' : WrapAround
+    },
+    mounted() {
+        this.counterInterval = 0;
+        this.counterInterval = setInterval(() => {
+            document.getElementById("surprise").classList.toggle("toggleCatAnim");
+        }, 50000)
+    },
+    unmounted() {
+        clearInterval(this.counterInterval);
     }
 }
 </script>
@@ -169,6 +179,17 @@ h2 {
   #second {
     font-size: 17px;
   }
+  #surprise {
+    display: none;
+  }
+}
+@media only screen and (max-width: 500px) {
+    #bg-logo {
+        width: 340px;
+    }
+    #surprise {
+        display: none;
+    }
 }
 @media only screen and (max-width: 340px) {
   #carousel-container {
@@ -183,6 +204,12 @@ h2 {
   }
   #second {
     font-size: 17px;
+  }
+  #bg-logo {
+    width: 300px;
+  }
+  #surprise {
+    display: none;
   }
 }
 </style>

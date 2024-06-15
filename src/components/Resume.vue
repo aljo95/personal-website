@@ -1,4 +1,5 @@
 <template>
+    <router-link to="/cats"><img id="surprise" src="/surprise.png" /></router-link>
     <div id="resume-container">
 
         <a id="download-link" href="/resume/CV_Alexander_Johansson.pdf" download>Download Resume</a>
@@ -15,7 +16,16 @@
 
 <script>
 export default {
-} //#6999eb; #4a5edb;
+    mounted() {
+        this.counterInterval = 0;
+        this.counterInterval = setInterval(() => {
+            document.getElementById("surprise").classList.toggle("toggleCatAnim");
+        }, 50000)
+    },
+    unmounted() {
+        clearInterval(this.counterInterval);
+    }
+}
 </script>
 
 
@@ -75,7 +85,9 @@ export default {
     #download-link {
         height: 15%;
     }
-
+    #surprise {
+        display: none;
+    }
 }
 @keyframes slideUpComponent {
     0% {

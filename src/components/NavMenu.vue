@@ -4,7 +4,7 @@
         <div id="nav-container">
             <router-link to="/" exact tag="div" class="rl">Home</router-link>
             <router-link to="/about" exact tag="div" class="rl">About me</router-link>
-            <router-link to="/portfolio" class="rl">Portfolio</router-link>
+            <router-link to="/portfolio" class="rl">Projects</router-link>
             <router-link to="/skills" class="rl">Skills</router-link>
             <router-link to="/resume" class="rl">Resume</router-link>
             <router-link to="/contact" class="rl">Contact</router-link>
@@ -27,7 +27,7 @@
             <div id="mobile-routes-container">
                 <router-link to="/" exact tag="div" class="rl mrl" @click="toggleMenu">Home</router-link>
                 <router-link to="/about" exact tag="div" class="rl mrl" @click="toggleMenu">About me</router-link>
-                <router-link to="/portfolio" class="rl mrl" @click="toggleMenu">Portfolio</router-link>
+                <router-link to="/portfolio" class="rl mrl" @click="toggleMenu">Projects</router-link>
                 <router-link to="/skills" class="rl mrl" @click="toggleMenu">Skills</router-link>
                 <router-link to="/resume" class="rl mrl" @click="toggleMenu">Resume</router-link>
                 <router-link to="/contact" class="rl mrl" @click="toggleMenu">Contact</router-link>
