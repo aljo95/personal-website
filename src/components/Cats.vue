@@ -29,8 +29,8 @@
                     <img id="m4" src="/cats/m/m4.jpg"></img>
                     <img id="m5" src="/cats/m/m5.jpg"></img>
                 </div>
-                <div v-show="tiger">
-                    
+                <div id="t-imgs" v-show="tiger">
+                    <img id="t1" src="/cats/t/t1.jpg"></img>
                 </div>
                 <div id="z-imgs" v-show="zeke">
                     <img id="z2" src="/cats/z/z2.jpg"></img>
@@ -273,6 +273,20 @@ export default {
 }
 
 /* T */
+#t-imgs {
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-evenly;
+    align-items: center;
+    margin-left: 6px;
+}
+
+#t1 {
+    margin-top: 4%;
+    width: 80%;
+    border-radius: 15px;
+}
 
 
 /* MQs */
@@ -286,21 +300,30 @@ export default {
 }
 @media only screen and (max-width: 400px) {
     #cats-container {
-        width: 310px;
+        width: 320px;
         
     }
     #clickables {
-        width: 310px;
+        width: 320px;
     }
+    
     #img-container {
         border-radius: 0 0 15px 15px;
     }
 
     #g-imgs {
         margin: 0;
+        padding-bottom: 20%;
     }
     #g1, #g2 {
-        width: 95%;
+        width: 90%;
+    }
+    #t-imgs {
+        margin: 0;
+        padding-bottom: 50%;
+    }
+    #t1 {
+        width: 90%;
     }
 
     #k-imgs {
@@ -324,6 +347,12 @@ export default {
         margin: 0;
     }
     #z1, #z2, #z3 {
+        width: 95%;
+    }
+    #t-imgs {
+        margin: 0;
+    }
+    #t1 {
         width: 95%;
     }
 }
