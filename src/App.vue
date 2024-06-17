@@ -6,15 +6,97 @@
     <router-view>
     </router-view>
   </div>
+  <div id="pre-cache-con" v-for="image in imgCache" :src=image>
+    <!--<img src={{ image }} >{{ image }}</img> -->
+  </div>
 </template>
 
 
 <script>
 export default {
+  data() {
+    return {
+      imgCache: [
+        '/skills-icons/angular1.png',
+        '/skills-icons/asm1.png',
+        '/skills-icons/c1.png',
+        '/skills-icons/django1.png',
+        '/skills-icons/elixir1.png',
+        '/skills-icons/express1.png',
+        '/skills-icons/java1.png',
+        '/skills-icons/js1.png',
+        '/skills-icons/mDB1.png',
+        '/skills-icons/mySQL1.png',
+        '/skills-icons/next1.png',
+        '/skills-icons/postgreSQL1.png',
+        '/skills-icons/py1.png',
+        '/skills-icons/react1.png',
+        '/skills-icons/spring1.png',
+        '/skills-icons/tailwind1.png',
+        '/skills-icons/ts1.png',
+        '/skills-icons/vue1.png',
+        '/skills-icons/ranking/angularSkill.png',
+        '/skills-icons/ranking/asmSkill.png',
+        '/skills-icons/ranking/cSkill.png',
+        '/skills-icons/ranking/djangoSkill.png',
+        '/skills-icons/ranking/elixirSkill.png',
+        '/skills-icons/ranking/expressSkill.png',
+        '/skills-icons/ranking/javaSkill.png',
+        '/skills-icons/ranking/jsSkill.png',
+        '/skills-icons/ranking/mDBSkill.png',
+        '/skills-icons/ranking/mySQLSkill.png',
+        '/skills-icons/ranking/nextSkill.png',
+        '/skills-icons/ranking/postgreSQLSkill.png',
+        '/skills-icons/ranking/pySkill.png',
+        '/skills-icons/ranking/reactSkill.png',
+        '/skills-icons/ranking/springSkill.png',
+        '/skills-icons/ranking/tailwindSkill.png',
+        '/skills-icons/ranking/tsSkill.png',
+        '/skills-icons/ranking/vueSkill.png',
+        '/contact/background-logo.png',
+        '/contact/email-icon.png',
+        '/contact/github-mark-white.png',
+        '/contact/linkedin-icon.png',
+        '/contact/phone-icon-white.png',
+        '/cats/g/g1.jpg',
+        '/cats/g/g2.jpg',
+        '/cats/k/k1-fix.jpg',
+        '/cats/k/k2.jpg',
+        '/cats/k/k3.jpg',
+        '/cats/k/k4.jpg',
+        '/cats/m/m1.jpg',
+        '/cats/m/m2.jpg',
+        '/cats/m/m3.jpg',
+        '/cats/m/m4.jpg',
+        '/cats/m/m5.jpg',
+        '/cats/z/z1.jpg',
+        '/cats/z/z2.jpg',
+        '/cats/z/z3.jpg',
+        '/portfolio-imgs/epr-bigimg.jpg',
+        '/portfolio-imgs/gh-icon-port.png',
+        '/portfolio-imgs/link-icon-port.png',
+        '/portfolio-imgs/nc-bigimg.png',
+        '/portfolio-imgs/y1.jpg',
+        '/portfolio-imgs/y2.jpg',
+        '/resume/cv-image.png',
+        '/nav-icons/email-icon.png',
+        '/nav-icons/github-mark-white.png',
+        '/nav-icons/linkedin-icon.png',
+        '/nav-icons/menuIconMobile.png'
+      ]
+    }
+  },
+  mounted() {
+    this.imgCache.forEach( function(path) { new Image().src=path } );
+  }
 }
 </script>
 
 <style>
+#pre-cache-con {
+  width: 0;
+  height: 0;
+}
 html, body, #app {
   background-color: #090d14;
   width: 100%;
@@ -56,7 +138,8 @@ html, body, #app {
   }
 }
 html {
-  background-image: url('/skills-icons/angular1.png'),
+  background-image: 
+    url('/skills-icons/angular1.png'),
     url('/skills-icons/asm1.png'),
     url('/skills-icons/c1.png'),
     url('/skills-icons/django1.png'),
