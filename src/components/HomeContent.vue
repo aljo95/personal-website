@@ -52,20 +52,24 @@ export default {
     },
     methods: {
         clickFunc() { /* click to bypass animations */
+            let title_1 = document.getElementById("first")
+            let title_2 = document.getElementById("second")
+            let carouselContainer = document.getElementById("carousel-container")
+            let allNavContainer = document.getElementById("all-nav-container")
+            let navContainer = document.getElementById("nav-container")
+            let imgLinks = document.getElementById("img-links")
             /* titles */
-            document.styleSheets[3].cssRules[1].style.removeProperty('animation-duration')
-            document.styleSheets[3].cssRules[1].style.removeProperty('animation-delay')
-            document.styleSheets[3].cssRules[4].style.removeProperty('animation-duration')
-            document.styleSheets[3].cssRules[4].style.removeProperty('animation-delay')
-
+            title_1.style.animationDuration = "0s"
+            title_1.style.animationDelay = "0s"
+            title_2.style.animationDuration = "0s"
+            title_2.style.animationDelay = "0s"
             /* carousel */
-            document.styleSheets[3].cssRules[7].style.removeProperty('animation-duration')
-            document.styleSheets[3].cssRules[7].style.removeProperty('animation-delay')
-
+            carouselContainer.style.animationDuration = "0s"
+            carouselContainer.style.animationDelay = "0s"
             /* nav list */
-            document.styleSheets[11].cssRules[1].style.removeProperty('animation-duration')
-            document.styleSheets[11].cssRules[2].style.removeProperty('animation-duration')
-            document.styleSheets[11].cssRules[8].style.removeProperty('animation-duration')
+            allNavContainer.style.animationDuration = "0s"
+            navContainer.style.animationDuration = "0s"
+            imgLinks.style.animationDuration = "0s"
         }
     }
 }
