@@ -1,6 +1,6 @@
 <template>
     <router-link to="/cats"><img id="surprise" src="/surprise.png" /></router-link>
-    <img id="bg-logo" src="/contact/background-logo.png"></img>
+    <!--<img id="bg-logo" src="/contact/background-logo.png"></img>-->
     <div id="main-content">
         <div id="title-container">
             <h2 id="first">Alex Johansson</h2>
@@ -25,13 +25,48 @@ export default {
         'carousel-comp' : WrapAround
     },
     mounted() {
+        window.addEventListener('click', this.clickFunc, true)
+        /*
+        window.addEventListener("click", function(e) {
+
+            console.log("clicked")
+            setTimeout(() => {
+            window.removeEventListener("click", () => {
+                console.log("rmved after 4s")
+            }, true);
+        }, 4000)
+
+        });*/
         this.counterInterval = 0;
         this.counterInterval = setInterval(() => {
             document.getElementById("surprise").classList.toggle("toggleCatAnim");
         }, 50000)
+        setTimeout(() => {
+            window.removeEventListener('click', this.clickFunc, true);
+        }, 9000)
+        
     },
     unmounted() {
         clearInterval(this.counterInterval);
+        window.removeEventListener('click', this.clickFunc, true);
+    },
+    methods: {
+        clickFunc() { /* click to bypass animations */
+            /* titles */
+            document.styleSheets[3].cssRules[1].style.removeProperty('animation-duration')
+            document.styleSheets[3].cssRules[1].style.removeProperty('animation-delay')
+            document.styleSheets[3].cssRules[4].style.removeProperty('animation-duration')
+            document.styleSheets[3].cssRules[4].style.removeProperty('animation-delay')
+
+            /* carousel */
+            document.styleSheets[3].cssRules[7].style.removeProperty('animation-duration')
+            document.styleSheets[3].cssRules[7].style.removeProperty('animation-delay')
+
+            /* nav list */
+            document.styleSheets[11].cssRules[1].style.removeProperty('animation-duration')
+            document.styleSheets[11].cssRules[2].style.removeProperty('animation-duration')
+            document.styleSheets[11].cssRules[8].style.removeProperty('animation-duration')
+        }
     }
 }
 </script>
@@ -39,12 +74,14 @@ export default {
 
 
 <style scoped>
+/*
 #bg-logo {
     position: absolute;
     z-index: 0;
     opacity: 0.06;
     width: 500px;
 }
+    */
 #title-container, #title-container-two {
     width: 872px;
     height: 5%;

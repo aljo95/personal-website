@@ -35,7 +35,7 @@
         },
         data() {
             return {
-                dataArr: ["About me", "Portfolio", "Skills", "Resume", "Contact", "Cats"],
+                dataArr: ["Portfolio", "Skills", "Resume", "Contact", "Cats", "About me"],
                 autoTimer: 0,
                 itemsToShowVar: 3.334,
                 mousePosX: 0,
