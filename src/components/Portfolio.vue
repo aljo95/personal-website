@@ -17,7 +17,7 @@
                 <div class="text-lines" id="first-third">Dockerized and deployed in an AWS EC2 instance.</div>
                 <div class="text-lines">Nginx reverse proxy with Certbot and Let's encrypt.</div>
             </div>
-            <div id="link-img-1"><a href="https://nodechat.live">nodechat.live</a></div>
+            <div id="link-img-1"><a class="link-text" href="https://nodechat.live">nodechat.live</a></div>
             <img class="img-1" src="/portfolio-imgs/nc-bigimg.png"></img>
         </div>
         <div id="second-container">
@@ -32,7 +32,7 @@
                 <div class="text-lines" id="first-third">Consumes a public API and scrapes pages with Next.js serverless functions.</div>
                 <div class="text-lines">Hosted for free via Vercel.</div>
             </div>
-            <div id="link-img-1"><a href="https://enklapolisrapporter.vercel.app/">Simple Police Reports</a></div>
+            <div id="link-img-1"><a class="link-text" href="https://enklapolisrapporter.vercel.app/">Simple Police Reports</a></div>
             <img class="img-1" src="/portfolio-imgs/epr-bigimg.jpg"></img>
         </div>
         <div id="third-container">
@@ -46,7 +46,7 @@
                 <div class="text-lines" id="first-second">Adds functionality to Youtube video viewer by allowing comments to be read on the side of the video.</div>
                 <div class="text-lines">Available on the Chrome Web store with several active users.</div>
             </div>
-            <div id="link-img-1"><a href="https://chromewebstore.google.com/detail/youtube-side-comments/lfjgegiodinfcejpdfoclmljkllkmgpf">Youtube Side Comments</a></div>
+            <div id="link-img-1"><a class="link-text" href="https://chromewebstore.google.com/detail/youtube-side-comments/lfjgegiodinfcejpdfoclmljkllkmgpf">Youtube Side Comments</a></div>
             <img class="img-3" v-bind:src="GIFSimulate"></img>
         </div>
     </div>
@@ -225,6 +225,18 @@ export default {
     border: solid;
     border-radius: 15px;
     border-color: #3c5792;
+}
+.link-text:link {
+    color: #6894f3;
+}
+.link-text:visited {
+    color: #6894f3;
+}
+.link-text:hover {
+    color: #3c5792;
+}
+.link-text:active {
+    color: #3c5792;
 }
 
 /* media queries */
