@@ -30,7 +30,7 @@ export default {
         this.counterInterval = 0;
         this.counterInterval = setInterval(() => {
             document.getElementById("surprise").classList.toggle("toggleCatAnim");
-        }, 10000)
+        }, 5000)
     },
     unmounted() {
         clearInterval(this.counterInterval);

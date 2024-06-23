@@ -40,7 +40,7 @@ export default {
         this.counterInterval = 0;
         this.counterInterval = setInterval(() => {
             document.getElementById("surprise").classList.toggle("toggleCatAnim");
-        }, 50000)
+        }, 15000)
         setTimeout(() => {
             window.removeEventListener('click', this.clickFunc, true);
         }, 9000)
