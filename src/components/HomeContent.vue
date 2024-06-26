@@ -1,6 +1,5 @@
 <template>
     <router-link to="/cats"><img id="surprise" src="/surprise.png" /></router-link>
-    <!--<img id="bg-logo" src="/contact/background-logo.png"></img>-->
     <div id="main-content">
         <div id="title-container">
             <h2 id="first">Alex Johansson</h2>
@@ -26,21 +25,10 @@ export default {
     },
     mounted() {
         window.addEventListener('click', this.clickFunc, true)
-        /*
-        window.addEventListener("click", function(e) {
-
-            console.log("clicked")
-            setTimeout(() => {
-            window.removeEventListener("click", () => {
-                console.log("rmved after 4s")
-            }, true);
-        }, 4000)
-
-        });*/
         this.counterInterval = 0;
         this.counterInterval = setInterval(() => {
             document.getElementById("surprise").classList.toggle("toggleCatAnim");
-        }, 15000)
+        }, 17500)
         setTimeout(() => {
             window.removeEventListener('click', this.clickFunc, true);
         }, 9000)
@@ -78,14 +66,6 @@ export default {
 
 
 <style scoped>
-/*
-#bg-logo {
-    position: absolute;
-    z-index: 0;
-    opacity: 0.06;
-    width: 500px;
-}
-    */
 #title-container, #title-container-two {
     width: 872px;
     height: 5%;
@@ -93,7 +73,6 @@ export default {
     align-items: center;
     margin: 0 auto 0 auto;
     border-left: solid;
-    /* border-color: #141c4d; */
     border-color: #4a5edb;
     padding-left: 5px;
 }
@@ -151,9 +130,7 @@ export default {
 
 #main-content {
     height: 100%;
-    /*width: 52.5%;*/
     width: 100%;
-    /*border: solid;*/
     display: flex;
     flex-direction: column;
     justify-content: center;
@@ -163,17 +140,10 @@ export default {
 #carousel-container {
     border-left: solid;
     border-right: solid;
-    /*border-color: #141c4d;*/
     border-color: #4a5edb;
     width: 875px;
     margin: 0 auto 0 auto;
     opacity: 0;
-    /*
-    animation: openCarousel 8s; 
-    animation-timing-function: linear; 
-    animation-delay: 2s;
-    animation-fill-mode: forwards;
-    */
     animation: openCarousel 6s forwards;
     animation-delay: 4.5s;
     margin-top: 10px;
@@ -208,7 +178,6 @@ h2 {
 /* media query 100vh/vw container */
 @media only screen and (max-width: 1200px) {
   #carousel-container {
-    /*width: 320px;*/
     width: 322px;
   }
   #title-container {
@@ -234,7 +203,6 @@ h2 {
 }
 @media only screen and (max-width: 340px) {
   #carousel-container {
-    /*width: 320px;*/
     width: 302px;
   }
   #title-container {
