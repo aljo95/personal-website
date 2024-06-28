@@ -7,7 +7,6 @@
     </router-view>
   </div>
   <div id="pre-cache-con" v-for="image in imgCache" :src=image>
-    <!--<img src={{ image }} >{{ image }}</img> -->
   </div>
 </template>
 
