@@ -4,7 +4,6 @@
         <h2>Skills</h2>
         <div id="ranking-container">
             <p id="skill-type"> {{ skillType }} </p>
-            <!--<img class="ranking-images" :src="skillImage"></img> -->
             <img class="ranking-images" src="/skills-icons/ranking/jsSkill.png" v-show="currentRank.js">
             <img class="ranking-images" src="/skills-icons/ranking/tsSkill.png" v-show="currentRank.ts">
             <img class="ranking-images" src="/skills-icons/ranking/javaSkill.png" v-show="currentRank.java">
@@ -30,13 +29,11 @@
                 @mouseleave="(e) => mouseLeave(e)"
                 @click="(e) => mouseClick(e)"
             >
-                <img :id=getID(s) :src=getImgLink(s)></img>
+                <img :id=getID(s) :src=getImgLink(s) />
             </div>
         </div>
     </div>
 </template>
-
-
 
 
 <script>
@@ -51,7 +48,6 @@ export default {
                 "express", "spring", "django"
             ],
             skillType: "JavaScript",
-            //skillImage: "/skills-icons/ranking/jsSkill.png",
             currentRank: {
                 js: true,
                 ts: false,
@@ -83,7 +79,6 @@ export default {
             return skill;
         },
         getRankingImage(e) {
-            //this.skillImage = "/skills-icons/ranking/" + e.id + "Skill.png"
             this.currentRank[this.prevRank] = false;
             this.currentRank[e.id] = true;
             this.prevRank = e.id;
@@ -224,7 +219,6 @@ export default {
 </script>
 
 
-
 <style scoped>
 @font-face {
     font-family: "OutfitR";
@@ -251,7 +245,6 @@ h2 {
     -webkit-background-clip: text;
 }
 #icons-container {
-    
     display: flex;
     flex-direction: row;
     flex-wrap: wrap;
@@ -260,7 +253,6 @@ h2 {
     overflow-y: auto;
     
 }
-
 
 /************* ICONS  ************/
 #js, #ts, #c, #java, #py, #mySQL, #postgreSQL, #mDB, #asm, 
@@ -276,7 +268,6 @@ h2 {
     width: 45%;
     height: 45%;
 }
-
 .imgs-containers {
     border: solid;
     border-color: #2b2668;
@@ -294,8 +285,7 @@ h2 {
     box-shadow: 0 0 7.5px 1px black;
     transition: 0.25s;
 }
-.imgs-containers:hover {
-    
+.imgs-containers:hover { 
     -moz-box-shadow: 0 0 7.5px 2px #4a5ddbb4;
     -webkit-box-shadow: 0 0 7.5px 2px #4a5ddbb4;
     box-shadow: 0 0 7.5px 2px #4a5ddbb4;
@@ -319,7 +309,6 @@ h2 {
     border-color: #4a5ddbb4;
     background-color: #2b266867;
 }
-
 #ranking-container {
     width: 375px;
     height: 20%;
@@ -360,7 +349,6 @@ h2 {
         opacity: 1;
     }
 }
-
 @keyframes slideUpComponent {
     0% {
         margin-top: 1.5%;
@@ -368,7 +356,6 @@ h2 {
     }
     60% {
         opacity: 0.5;
-        /*margin-top: -0.5%;*/
         margin-top: 0;
         margin-bottom: 0;
     }
@@ -420,4 +407,3 @@ h2 {
     }
 }
 </style>
-
