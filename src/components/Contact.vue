@@ -22,8 +22,6 @@
 </template>
 
 
-
-
 <script>
 export default {
     mounted() {
@@ -37,7 +35,6 @@ export default {
     }
 }
 </script>
-
 
 
 <style scoped>
@@ -128,7 +125,6 @@ p {
     }
     60% {
         opacity: 0.5;
-        /*margin-top: -0.75%;*/
     }
     100% {
         margin-top: 0%;
@@ -154,20 +150,20 @@ p {
     .toggleCatAnim {
         animation: catAnim 10s forwards linear;
     }
-@keyframes catAnim {
-    0% {
-        top: 100%;
+    @keyframes catAnim {
+        0% {
+            top: 100%;
+        }
+        5% {
+            top: 91.5%;
+        }
+        95% {
+            top: 91.5%;
+        }
+        100% {
+            top: 100%;
+        }
     }
-    5% {
-        top: 91.5%;
-    }
-    95% {
-        top: 91.5%;
-    }
-    100% {
-        top: 100%;
-    }
-}
 }
 </style>
 

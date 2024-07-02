@@ -15,8 +15,6 @@
 </template>
 
 
-
-
 <script>
 import WrapAround from './Carousel.vue'
 export default {
@@ -32,7 +30,6 @@ export default {
         setTimeout(() => {
             window.removeEventListener('click', this.clickFunc, true);
         }, 9000)
-        
     },
     unmounted() {
         clearInterval(this.counterInterval);
@@ -62,7 +59,6 @@ export default {
     }
 }
 </script>
-
 
 
 <style scoped>

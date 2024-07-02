@@ -27,8 +27,6 @@
 </template>
 
 
-
-
 <script>
 export default {
     mounted() {
@@ -42,6 +40,7 @@ export default {
     }
 }
 </script>
+
 
 <style>
 #title-and-about-con {
@@ -61,7 +60,6 @@ export default {
 }
 @font-face {
     font-family: "OutfitR";
-    /*src: url("./fonts/static/Outfit-Regular.ttf")*/
     src: url('$fonts/Outfit-Regular.ttf')
 }
 h2 {
@@ -109,7 +107,6 @@ p {
     }
     60% {
         opacity: 0.5;
-        /*margin-top: -0.75%;*/
     }
     100% {
         margin-top: 0%;
@@ -135,17 +132,6 @@ p {
     }
 }
 
-
-/* force animation accel =) 
-#hwaccelforce {
-    position: absolute;
-    color: #03A062;
-    white-space: nowrap;
-    overflow: hidden;
-    animation: typing 4s steps(60, end) forwards, blink 1s 1;
-    margin-bottom: 20%;
-    opacity: 1;
-} */
 @keyframes typing { 
     0% { 
         width: 0vw;
@@ -183,4 +169,3 @@ p {
   background-color: #1a1b2c;
 }
 </style>
-

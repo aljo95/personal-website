@@ -106,7 +106,7 @@ export default {
     src: url('$fonts/Outfit-Regular.ttf')
 }
 #all-nav-container {
-    position: fixed; /* fixed? */
+    position: fixed;
     width: 130px;
     height: 275px;
     border-top: solid;
@@ -137,7 +137,6 @@ export default {
     z-index: 99;
 }
 #nav-container:hover {
-    /* transition smooth color l8er*/ 
     background-color: #1a1b22b9;
 }
 .rl {
@@ -309,13 +308,4 @@ p {
     height: 40px;
     padding-top: 7.5px;
 }
-/*
-@media only screen and (max-width: 1200px) {
-  #mobile-menu {
-    width: 35px;
-    height: 35px;
-    padding: 15px;
-  }
-}
-*/
 </style>

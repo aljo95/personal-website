@@ -1,24 +1,23 @@
 <template>
     <Carousel :items-to-show=itemsToShowVar :wrap-around="true" :autoplay=autoTimer>
-      <Slide v-for="slide in dataArr" :key="slide">
-        <div class="carousel__item">
-            <router-link @mousedown="(e) => mouseDownGetCoords(e)" @mouseup="(e) => mouseUpGetCoords(e)" :to="getLink(slide)" class="router-container">
-                <div class="each-slide-con">
-                    <img class="slide-imgs" :src=getImgLink(slide)></img>
-                    <p class="slide-titles">{{ slide }}</p>
-                </div>
-            </router-link>
-        </div>
-      </Slide>
+        <Slide v-for="slide in dataArr" :key="slide">
+            <div class="carousel__item">
+                <router-link @mousedown="(e) => mouseDownGetCoords(e)" @mouseup="(e) => mouseUpGetCoords(e)" :to="getLink(slide)" class="router-container">
+                    <div class="each-slide-con">
+                        <img class="slide-imgs" :src=getImgLink(slide) />
+                        <p class="slide-titles">{{ slide }}</p>
+                    </div>
+                </router-link>
+            </div>
+        </Slide>
   
-      <template #addons>
-        <Navigation />
-        <Pagination class="under-btns"/>
-      </template>
+        <template #addons>
+            <Navigation />
+            <Pagination class="under-btns"/>
+        </template>
     </Carousel>
-  </template>
+</template>
   
-
 
 <script>
     import { defineComponent } from 'vue'
@@ -78,7 +77,6 @@
                 }
             },
             getImgLink(slideValue) {
-                //"/about.png"
                 switch(slideValue) {
                     case "About me":
                         return "/carousel-imgs/about.png";
@@ -119,6 +117,7 @@
         },
     })
 </script>
+
 
 <style>
 .carousel__item {
@@ -201,10 +200,6 @@
     background-color: #141c4d;
     width: 100%;
 }
-
-/* #4a5edb;
-#629fe9;
-#7e9af5; */
 .each-slide-con {
     display: flex;
     flex-direction: column;
@@ -222,9 +217,6 @@
     justify-content: center;
     align-items: center;
 }
-
-
-
 
 @media only screen and (max-width: 1200px) {
     .carousel__item {

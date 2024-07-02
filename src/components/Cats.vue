@@ -1,8 +1,6 @@
 <template>
     <div id="cats-container">
-
         <h2 id="title">Cats</h2>
-        
         <div id="content-container">
             <div id="clickables">
                 <p class="cat-names" id="geppa" @click="(e) => catigator(e)">Geppa</p>
@@ -39,11 +37,8 @@
                 </div>
             </div>
         </div>
-
     </div>
 </template>
-
-
 
 
 <script>
@@ -67,7 +62,6 @@ export default {
             this.tiger = false
             this.zeke = false
             
-           
             let currentCat = (e.target.innerText).toLowerCase()
 
             document.getElementById(this.prevSelected).style.color = "white"
@@ -94,7 +88,6 @@ export default {
             }
             this.prevSelected = currentCat;
             document.getElementById("img-container").scrollTop = 0;
-
         }
     },
     mounted() {
@@ -103,7 +96,6 @@ export default {
     }
 }
 </script>
-
 
 
 <style scoped>
@@ -128,7 +120,6 @@ export default {
     display: flex;
     justify-content: center;
     align-items: center;
-    
 }
 #content-container {
     height: 90%;
@@ -181,7 +172,7 @@ export default {
     border-radius: 15px;
 }
 ::-webkit-scrollbar-thumb {
-    background-color: #3c5792; /*#5278b9d5;  #4a5edb; */
+    background-color: #3c5792;
     border-radius: 3px;
     margin: auto;
     border-radius: 15px;
@@ -288,7 +279,6 @@ export default {
     border-radius: 15px;
 }
 
-
 /* MQs */
 @media only screen and (max-width: 600px) {
     #cats-container {
@@ -363,7 +353,6 @@ export default {
     }
     60% {
         opacity: 0.5;
-        /*margin-top: -0.75%;*/
     }
     100% {
         margin-top: 0%;
@@ -371,4 +360,3 @@ export default {
     }
 }
 </style>
-

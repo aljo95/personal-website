@@ -1,17 +1,12 @@
 <template>
     <router-link to="/cats"><img id="surprise" src="/surprise.png" /></router-link>
     <div id="resume-container">
-
         <a id="download-link" href="/resume/CV_Alexander_Johansson.pdf" download>Download Resume</a>
         <div id="img-container">
             <img id="cv-image" src="/resume/cv-image.png"></img>
         </div>
-
-
     </div>
 </template>
-
-
 
 
 <script>
@@ -96,13 +91,10 @@ export default {
     }
     60% {
         opacity: 0.5;
-        /*margin-top: -0.75%;*/
     }
     100% {
         margin-top: 0%;
         opacity: 1;
     }
 }
-
 </style>
-

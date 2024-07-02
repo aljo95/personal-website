@@ -53,8 +53,6 @@
 </template>
 
 
-
-
 <script>
 export default {
     data() {
@@ -81,20 +79,17 @@ export default {
 </script>
 
 
-
 <style scoped>
 @font-face {
     font-family: "OutfitR";
     src: url('$fonts/Outfit-Regular.ttf')
 }
 #title, #sub-title {
-    /*margin-top: 5%;*/
     font-family: OutfitR, sans-serif;
     color: #6999eb;
     font-size: 28px;
 }
 #sub-title {
-    /*margin-top: 1%;*/
     color: #6999eb;
     font-size: 18px;
     margin-top: -10px;
@@ -137,7 +132,6 @@ export default {
     }
     60% {
         opacity: 0.5;
-        /*margin-top: -0.75%;*/
     }
     100% {
         opacity: 1;
@@ -150,7 +144,7 @@ export default {
     border: none;
 }
 ::-webkit-scrollbar-thumb {
-    background-color: #3c5792; /*#5278b9d5;  #4a5edb; */
+    background-color: #3c5792; 
     border-radius: 3px;
     margin: auto;
 }
@@ -161,8 +155,6 @@ export default {
   border-radius: 3px;
   background-color: #1a1b2c;
 }
-
-
 
 #first-container, #second-container, #third-container {
     border-top: solid;
@@ -293,6 +285,6 @@ export default {
     #surprise {
         display: none;
     }
-} /*text-wrap:wrap; */
+}
 </style>
 
