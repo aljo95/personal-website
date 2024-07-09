@@ -1,10 +1,12 @@
 <template>
     <router-link to="/cats"><img id="surprise" src="/surprise.png" /></router-link>
     <div id="resume-container">
-        <a id="download-link" href="/resume/CV_Alexander_Johansson.pdf" download>Download Resume</a>
+        <!--<a id="download-link" href="/resume/CV_Alexander_Johansson.pdf" download>Download Resume</a>-->
+        <p id="download-link">Updating soon</p>
         <div id="img-container">
-            <img id="cv-image" src="/resume/cv-image.png"></img>
+            <!--<img id="cv-image" src="/resume/cv-image.png"></img>-->
         </div>
+
     </div>
 </template>
 
